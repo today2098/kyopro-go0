@@ -20,6 +20,23 @@
                 "kind": "build",
                 "isDefault": true
             }
+        },
+        {
+            "label": "Go: build active file for debug",
+            "type": "shell",
+            "command": "/usr/bin/go",
+            "args": [
+                "build",
+                "-gcflags=all='-N -l'", // デバッグに必要なコンパイルオプション
+                "-o",
+                "${workspaceFolder}/debug.out",
+                "${file}"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": "build",
         }
+        // 参考：https://qiita.com/propella/items/9d7b1dece283cf462cb9
     ]
 }
