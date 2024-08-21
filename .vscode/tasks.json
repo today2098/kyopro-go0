@@ -6,7 +6,7 @@
         {
             "label": "Go: build active file",
             "type": "shell",
-            "command": "/usr/bin/go",
+            "command": "/opt/homebrew/bin/go",
             "args": [
                 "build",
                 "-o",
@@ -24,7 +24,7 @@
         {
             "label": "Go: build active file for debug",
             "type": "shell",
-            "command": "/usr/bin/go",
+            "command": "/opt/homebrew/bin/go",
             "args": [
                 "build",
                 "-gcflags=all='-N -l'", // デバッグに必要なコンパイルオプション
