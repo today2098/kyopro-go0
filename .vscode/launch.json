@@ -10,11 +10,17 @@
             "request": "launch",
             "mode": "exec", // プログラムで指定されたビルドされたバイナリを実行する
             "program": "${workspaceFolder}/debug.out",
-            "args": [
-                "<${workspaceFolder}/input.txt"
-            ],
+            // "dlvFlags": [
+            //     "-r",
+            //     "stdin:${workspaceFolder}/input.txt",
+            //     "-r",
+            //     "stdout:${workspaceFolder}/output.txt",
+            // ],
+            "console": "integratedTerminal",
             "preLaunchTask": "Go: build active file for debug",
         }
     ]
-    // 参考：https://qiita.com/momotaro98/items/7fbcad57a9d8488fe999
+    // 参考：
+    //   - https://qiita.com/momotaro98/items/7fbcad57a9d8488fe999
+    //   - https://github.com/golang/vscode-go/issues/2155
 }
